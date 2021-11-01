@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    font-family:   "Century Gothic";
+    background-color: #2f2be24a}
+.tile{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(13 150 173);
+    height: 200px;
+}
+
+h1{
+    color: white;
+    text-align: center;
+    padding-left: 400px;
+    padding-top: 50px;
+}
+
+button{
+    background-color: #bb4848; 
+    border: none;
+    color: white;
+    padding: 17px 70px;
+    text-align: left;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.bar{
+    padding-top: 70px;
+    padding-left: 30px;
+}
+#search{
+    padding: 17px;
+    width: 75%;
+}
+
+#result{
+    color: rgb(46, 46, 46);
+    padding-left: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}

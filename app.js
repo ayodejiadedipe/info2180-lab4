@@ -7,11 +7,15 @@ window.onload = function () {
 
         httpRequest = new XMLHttpRequest();
 
+        var search = document.getElementById("search").value;
+        console.log(search);
+
         var url = "superheroes.php";
         httpRequest.onreadystatechange = list;
-        httpRequest.open('GET', url);
+        httpRequest.open('GET', 'superheroes.php?query=' + search, true);
         httpRequest.send();
 
+        
     });
 
     function list() {
@@ -19,8 +23,10 @@ window.onload = function () {
             // response received    
             if (httpRequest.status === 200) {
                 //perfect
-                response = httpRequest.responseText;
-                alert(response);
+                var response = httpRequest.responseText;
+                console.log(response);
+                var result = document.getElementById("result");
+                result.innerHTML = "<h2>RESULT</h2>" + response;
             }
             else {
                 alert('There was a problem with the request. ');
